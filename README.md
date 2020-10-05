@@ -105,13 +105,38 @@ Success: Animation of character being petted will be triggered, at the end scree
 - [X] HOW TO PLAY view will be open
 - [X] Save all android.view.View inside a List<MobileElement>
 - [X] Go through list and find item with correct text 
-- [X] In case of a success display input
-- [X] In case of a fail trigger IOException
-  
-  
- 
- 
 
+  
+## Feed him with some food, make sure he is indeed eating something and take screenshot
+- [X] Create new class "FoodTest.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+- [X] Create new method with @Test
+- [X] Get food button element with. ID of an element is com.outfit7.talkingtom:id/foodButton
+- [X] Check if button is not null and proceed to click on button
+- [X] Find one item (In my case I choose food time chilli). ID of an element= com.outfit7.talkingtom:id/foodItemChilly
+- [X] If food item is not null procced to trigger click event on button 
+- [X] Take a screenshot of eating animation
+
+
+## Create a custom test scenario
+- [X] Create new class "FoodTest.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+- [X] Create new method with @Test, method will trigger poke until knockdown
+- [X] Create new method with @Test, method will trigger press action which will trigger pet down animation
+  - [X] Violence is ON
+    - [X] Check that we are in main room
+    - [X] Create loop that press action will be triggered x11 times
+    - [X] Take a screenshot
+  - [X] Violence is OFF
+    - [X] Check that we are in main room
+    - [X] Get id for info button. ID of an element is com.outfit7.talkingtom:id/buttonInfo 
+    - [X] Trigger click event on element 
+    - [X] Once we are in INFO view get id for settings button. ID for an element is com.outfit7.talkingtom:id/infoWebButtonMoreSettings
+    - [X] After settings view is displayed get all checkbox element into List of MobileElement. ID for an element is android.widget.CheckBox
+    - [X] Craete a foreach so we can find first element with index 0 
+    - [X] Check if button is checked
+    - [X] Trigger click event 
+    - [X] Trigger click event on BACK BUTTON. xPath of an element is //android.widget.ImageButton[@content-desc=\"Navigate up\"]"
+    - [X] Tigger press event on the middle of the screen
+    - [X] Take a screenshot of current GUI status
 
 
 
