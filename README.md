@@ -1,2 +1,2 @@
 # AutomatedTestOutfit7
-Unit testing for Talking Tom application (Andorid)
+Unit testing for Talking Tom application (Android)
