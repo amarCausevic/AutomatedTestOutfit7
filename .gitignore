@@ -1,0 +1,6 @@
+target/classes/base.apk
+target/classes/log4j2.properties
+target/test-classes/com/outfit7/test/BaseTest.class
+target/test-classes/com/outfit7/test/FoodTest.class
+target/test-classes/com/outfit7/test/HowToPlayTest.class
+target/test-classes/com/outfit7/test/TomSettings.class
