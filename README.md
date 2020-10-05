@@ -94,7 +94,7 @@ Success: Animation of character being petted will be triggered, at the end scree
 
 
 # Solution for my expertise test
-## Go to info,press show to play and assert that first paragraph is correct “Talk to Tom and he repeats with a funny voice”
+## 1.) Go to info,press show to play and assert that first paragraph is correct “Talk to Tom and he repeats with a funny voice”
 - [X] Create new class "HowToPlay.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 - [X] Create new method with @Test
 - [X] First find an element for info button. ID of an element is com.outfit7.talkingtom:id/buttonInfo
@@ -107,7 +107,7 @@ Success: Animation of character being petted will be triggered, at the end scree
 - [X] Go through list and find item with correct text 
 
   
-## Feed him with some food, make sure he is indeed eating something and take screenshot
+## 2.) Feed him with some food, make sure he is indeed eating something and take screenshot
 - [X] Create new class "FoodTest.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 - [X] Create new method with @Test
 - [X] Get food button element with. ID of an element is com.outfit7.talkingtom:id/foodButton
@@ -117,7 +117,7 @@ Success: Animation of character being petted will be triggered, at the end scree
 - [X] Take a screenshot of eating animation
 
 
-## Create a custom test scenario
+## 3.) Create a custom test scenario
 - [X] Create new class "FoodTest.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 - [X] Create new method with @Test, method will trigger poke until knockdown
 - [X] Create new method with @Test, method will trigger press action which will trigger pet down animation
