@@ -8,11 +8,14 @@ Unit testing for Talking Tom application (Android)
 - Android SDK
 - adb
 - Java SDK
-- Enviroment: macOS Catalina Version 10.15.7
-
+- OS: macOS Catalina Version 10.15.7
+- Andriod version: 8.0.0.
+- Developer mode -> ON
+- USB debugging -> ON
+- USB configuration -> MTP
 
 # Hardware
-- Macbook pro 13
+- PC: Macbook Pro 13
 - Android device: Samsung Galaxy S7 Edge
 
 # Appium 
