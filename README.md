@@ -116,7 +116,7 @@ Success: Animation of character being petted will be triggered, at the end scree
 - [X] Get food button element with. ID of an element is com.outfit7.talkingtom:id/foodButton
 - [X] Check if button is not null and proceed to click on button
 - [X] Find one item (In my case I choose food time chilli). ID of an element= com.outfit7.talkingtom:id/foodItemChilly
-- [X] If food item is not null procced to trigger click event on button 
+- [X] If food item is not null proceed to trigger click event on button 
 - [X] Take a screenshot of eating animation
 
 
