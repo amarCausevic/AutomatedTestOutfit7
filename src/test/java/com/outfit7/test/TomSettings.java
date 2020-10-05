@@ -21,8 +21,10 @@ public class TomSettings extends BaseTest {
     @Test
     void knockOutTom() throws Exception {
         MobileElement foodButton = driver.findElement(By.id("com.outfit7.talkingtom:id/foodButton"));
+        // Check we are in the main room
         if(foodButton != null){
             logger.info("We are in main room, proceed to K.O.");
+            // Trigger press action on middle of the screen x11 times at the end take a screenshot
             for(int i = 0; i <= 10; i++){
                 pressActionMiddleOfScreen();
                 Thread.sleep(250);
@@ -35,23 +37,24 @@ public class TomSettings extends BaseTest {
 
     @Test
     void disableViolenceOnTom() throws Exception{
-        // First we are going to open How to play page
+        // First we are going to open How to play page and proceed to settings view
         driver.findElement(By.id("com.outfit7.talkingtom:id/buttonInfo")).click();
         logger.info("Info button was pressed");
         driver.findElement(By.id("com.outfit7.talkingtom:id/infoWebButtonMoreSettings")).click();
         logger.info("Settings button was pressed");
         List<MobileElement> checkBoxListSettings = driver.findElements(By.className("android.widget.CheckBox"));
 
+        // Check if we have any checkbox. Just to be sure that we are in settings view
         if(checkBoxListSettings.isEmpty()){
             logger.error("No elements were found on the page");
             throw new IOException("No elements weer found on the page");
         }else{
+            // Disable violence, go back to main room, press on tom and trigger screenshot
             logger.info("List of checkbox is not empty proceeding to disable or enable violence");
             disableOrEnableViolence(checkBoxListSettings);
             Thread.sleep(1000);
             driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]")).click();
             logger.info("Back button was pressed, we are back in the home screen");
-            //Click on TOM to trigger animation
             Thread.sleep(1000);
             pressActionMiddleOfScreen();
             logger.info("You are cuddling TALKING TOM");
@@ -60,6 +63,7 @@ public class TomSettings extends BaseTest {
         }
     }
 
+    // Return boolean if checkbox element is checked or not
     private boolean isChecked(MobileElement item){
         boolean checkboxState;
         if(item.getAttribute("checked").equals("true")){
@@ -70,6 +74,7 @@ public class TomSettings extends BaseTest {
     }
 
     // 0 -> Disable VIOLENCE
+    // If the index of an item in list is 0 tigger click aniumation
     private void disableOrEnableViolence(List<MobileElement> checkboxItems) throws Exception{
         int index = 0;
         for (MobileElement item : checkboxItems) {
@@ -86,6 +91,7 @@ public class TomSettings extends BaseTest {
         }
     }
 
+    // Calculate middle of the screen and trigger touch action
     private void pressActionMiddleOfScreen(){
         AndroidTouchAction touchAction;
         Dimension windowDimension = driver.manage().window().getSize();

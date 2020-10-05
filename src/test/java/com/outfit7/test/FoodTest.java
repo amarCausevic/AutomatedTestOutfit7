@@ -18,14 +18,19 @@ import java.io.IOException;
 class FoodTest extends BaseTest {
     private static final Logger logger = LogManager.getLogger(FoodTest.class);
     @Test
-    void feedTomWithWatermelon() throws InterruptedException, Exception {
+    void feedTomWithFoodItem() throws InterruptedException, Exception {
         MobileElement clickOnFoodButton = driver.findElement(By.id("com.outfit7.talkingtom:id/foodButton"));
+        // Check if we are in main room
         if(clickOnFoodButton != null){
+            // Open food item menu
             clickOnFoodButton.click();
             logger.info("Clicked on food button");
             MobileElement foodItem =  driver.findElement(By.id("com.outfit7.talkingtom:id/foodItemChilly"));
             logger.info("Food item is set, menu of food items is visible");
 
+            // Check that food item menu is opened
+            // Click on chilli item
+            // Take a screenshot
             if(foodItem != null){
                 Thread.sleep(1000);
                 foodItem.click();

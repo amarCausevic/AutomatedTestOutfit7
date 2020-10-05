@@ -33,7 +33,7 @@ class BaseTest {
     private void startAppiumConnection() throws Exception {
         // Set driver capabilities
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("fullReset", "false");
+        capabilities.setCapability("fullReset", "true");
         capabilities.setCapability("deviceName", "Android Device");
         capabilities.setCapability("platformName", "Android");
         File file = new File("src/main/resources/base.apk");
@@ -79,6 +79,7 @@ class BaseTest {
         logger.info("We are in main room");
     }
 
+    // Take a screenshot of current GUI status
     public void takeScreenShot(String nameOfScreenShot) throws Exception{
         File file  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File(nameOfScreenShot));
