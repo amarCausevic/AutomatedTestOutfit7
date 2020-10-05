@@ -1,8 +1,6 @@
 package com.outfit7.test;
 
-import com.sun.xml.internal.rngom.parse.host.Base;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import org.apache.logging.log4j.LogManager;
