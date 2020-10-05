@@ -45,6 +45,54 @@ TomSettings.java   | isChecked()                 | Boolean | Method returns true
 TomSettings.java   | disableOrEnableViolence()   | Void | Method will find first element in the list of (android.widget.CheckBox) and select first checkbox and disable it. 
 TomSettings.java   | pressActionMiddleOfScreen() | Void | Method will calculacte center of the screen and execute press touch action
 
+# Test scenarios
+
+## Feed Tom with food item
+Step     | Step Description                                             | Status    
+-------- | ------------------------------------------------------------ | ------------------------------------------------
+Step 1   | Trigger click event on food button to open food item menu    | :white_check_mark: Test case pass with success
+Step 2   | Trigger click event on food item to open food item menu      | :white_check_mark: Test case pass with success
+Step 3   | Take screenshot of character eating food item                | :white_check_mark: Test case pass with success
+Overall  | N/A                                                          | :white_check_mark: Test case pass with success
+
+Result: In case of success screenshot will be available in src folder, on GUI side user will see character eating food item. In case of failure exception will be thrown for futher investigation.
+
+## Check if paragraph exists in HOW TO PLAY view
+Step     | Step Description                                                  | Status    
+-------- | ----------------------------------------------------------------- | ------------------------------------------------
+Step 1   | Trigger click event info button to open info view                 | :white_check_mark: Test case pass with success
+Step 2   | Trigger click event on how to play button to open view            | :white_check_mark: Test case pass with success
+Step 3   | Search for string "Talk to Tom and he repeats with a funny voice" | :white_check_mark: Test case pass with success
+Overall  | N/A                                                               | :white_check_mark: Test case pass with success
+
+Success: Log ""We have a match: [" + containsParagraph + "] exists inside HOW TO PLAY view");" will be visible
+Fail: IOException
+
+## Custom test 
+### Knocked down character (Violence setting is ON)
+Step     | Step Description                                                  | Status    
+-------- | ----------------------------------------------------------------- | ------------------------------------------------
+Step 1   | Check if we are in MAIN room                                      | :white_check_mark: Test case pass with success
+Step 2   | Calculate middle of window dimension                              | :white_check_mark: Test case pass with success
+Step 3   | Trigger press action on character x11 times                       | :white_check_mark: Test case pass with success
+Overall  | N/A                                                               | :white_check_mark: Test case pass with success
+
+Success: Character will be "poked" x11 times, when press action is finished knock down animation is triggered. At the end screenshot is taken of current status on GUI.
+Fail: IOException
+
+### Pet character (Violence setting is OFF)
+Step     | Step Description                                                  | Status    
+-------- | ----------------------------------------------------------------- | ------------------------------------------------
+Step 1   | Check if we are in MAIN room                                      | :white_check_mark: Test case pass with success
+Step 2   | Trigger click action on info button                               | :white_check_mark: Test case pass with success
+Step 3   | Trigger click action on setting button                            | :white_check_mark: Test case pass with success
+Step 4   | Disable setting Violence (Can I hit Tom?)                         | :white_check_mark: Test case pass with success
+Step 5   | Return back to main room                                          | :white_check_mark: Test case pass with success
+Step 5   | Trigger press action on character                                 | :white_check_mark: Test case pass with success
+
+Success: Animation of character being petted will be triggered, at the end screenshot will be taken of current status on GUI.
+
+
 
 
 
