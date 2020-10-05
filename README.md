@@ -93,8 +93,24 @@ Step 5   | Trigger press action on character                                 | :
 Success: Animation of character being petted will be triggered, at the end screenshot will be taken of current status on GUI.
 
 
-
-
+# Solution for my expertise test
+## Go to info,press show to play and assert that first paragraph is correct “Talk to Tom and he repeats with a funny voice”
+- [X] Create new class "HowToPlay.java" with @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+- [X] Create new method with @Test
+- [X] First find an element for info button. ID of an element is com.outfit7.talkingtom:id/buttonInfo
+- [X] Second find an element for how to play button. ID of an element is com.outfit7.talkingtom:id/infoWebButtonHowToPlay
+- [X] Trigger click event on buttonInfo button 
+- [X] After we are in INFO view we can click on infoWebButtonHowToPlay
+- [X] Tigger click event on infoWebButtonHowToPlay
+- [X] HOW TO PLAY view will be open
+- [X] Save all android.view.View inside a List<MobileElement>
+- [X] Go through list and find item with correct text 
+- [X] In case of a success display input
+- [X] In case of a fail trigger IOException
+  
+  
+ 
+ 
 
 
 
